@@ -1,5 +1,6 @@
 package cl.cooperativa.presidencialesencooperativa;
 
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -7,7 +8,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +18,9 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 import java.io.IOException;
 
-public class ContainerActivity extends AppCompatActivity {
+
+public class ContainerActivity extends AppCompatActivity implements
+        View.OnClickListener{
 
     public String urlMediaPlayer ="http://unlimited3-cl.dps.live/cooperativafm/aac/icecast.audio";
     public MediaPlayer mediaPlayer = new MediaPlayer();
@@ -113,6 +115,7 @@ public class ContainerActivity extends AppCompatActivity {
                         ReporteroFragment reporteroFragment = new  ReporteroFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,reporteroFragment)
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
+                      //  reporteroFragment.launchCamera();
                         break;
 
                     case R.id.propuestas:
@@ -153,6 +156,11 @@ public class ContainerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
+
 
     public class cargaMedia extends AsyncTask<Void,Integer,Boolean> {
 
@@ -172,7 +180,7 @@ public class ContainerActivity extends AppCompatActivity {
            loading= ProgressDialog.show(ContainerActivity.this,"Cargando Medios", "Un momento por favor...",false,false);
             // final ProgressDialog pd = ProgressDialog.show(ContainerActivity.this, "", "Loading...", false, true);
 
-            System.out.println("ContainerActivity, progressbar Visible");
+            //System.out.println("ContainerActivity, progressbar Visible");
         }
         @Override
         protected void onPostExecute(Boolean aBoolean) {
@@ -180,7 +188,7 @@ public class ContainerActivity extends AppCompatActivity {
            // loading = new ProgressDialog(ContainerActivity.this);
             loading.dismiss();
 
-            System.out.println("ContainerActivity, progressbar INVisible");
+           // System.out.println("ContainerActivity, progressbar INVisible");
             floatingActionButtonPause.setVisibility(View.VISIBLE);
 
         }

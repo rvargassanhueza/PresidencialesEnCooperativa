@@ -59,6 +59,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "567919816467-trt719jsoinhi98jdl6dph6joab67bbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.cooperativa.presidencialesencooperativa",
+            "certificate_hash": "4c28076061bbd43c2c38553d213cb8706de4edb5"
+          }
+        },
+        {
           "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -73,8 +81,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

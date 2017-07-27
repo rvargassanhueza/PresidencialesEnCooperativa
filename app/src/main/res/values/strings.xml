@@ -23,6 +23,8 @@
     <string name="tab_portada">Portada Elecciones</string>
     <string name="action_settings">Acción de Menú</string>
 
+    <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="secondword_detail">Me Gusta</string>
