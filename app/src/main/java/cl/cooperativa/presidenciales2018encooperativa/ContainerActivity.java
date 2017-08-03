@@ -1,4 +1,4 @@
-package cl.cooperativa.presidencialesencooperativa;
+package cl.cooperativa.presidenciales2018encooperativa;
 
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
@@ -7,12 +7,21 @@ import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -20,7 +29,16 @@ import java.io.IOException;
 
 
 public class ContainerActivity extends AppCompatActivity implements
-        View.OnClickListener{
+        View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
+
+    private static final String TAG = "ContainerActivity";
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+    private GoogleApiClient googleApiClient;
+
+    private TextView tvUserDetail;
+    private Button btnSignOut;
+    private ImageView imvPhoto;
 
     public String urlMediaPlayer ="http://unlimited3-cl.dps.live/cooperativafm/aac/icecast.audio";
     public MediaPlayer mediaPlayer = new MediaPlayer();
@@ -39,7 +57,7 @@ public class ContainerActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_container);
         loading = new ProgressDialog(ContainerActivity.this);
 
-
+        initialize();
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottonbar);
         bottomBar.setDefaultTab(R.id.portada);
 
@@ -133,6 +151,7 @@ public class ContainerActivity extends AppCompatActivity implements
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -237,6 +256,51 @@ public class ContainerActivity extends AppCompatActivity implements
     }
     protected void onDestroy() {
         super.onDestroy();
+
+    }
+
+
+    private void initialize(){
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                if (firebaseUser !=  null){
+                    //tvUserDetail.setText("IDUser: " + firebaseUser.getUid() + " Email: " + firebaseUser.getEmail());
+                    //Picasso.with(ContainerActivity.this).load(firebaseUser.getPhotoUrl()).into(imvPhoto);
+                }else {
+                    Log.w(TAG, "onAuthStateChanged - signed_out");
+                }
+            }
+        };
+
+      /*  //Inicialización de Google Account
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();*/
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        firebaseAuth.removeAuthStateListener(authStateListener);
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
 }

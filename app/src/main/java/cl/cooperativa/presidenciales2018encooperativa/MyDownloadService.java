@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cl.cooperativa.presidencialesencooperativa;
+package cl.cooperativa.presidenciales2018encooperativa;
 
 import android.app.Service;
 import android.content.Intent;

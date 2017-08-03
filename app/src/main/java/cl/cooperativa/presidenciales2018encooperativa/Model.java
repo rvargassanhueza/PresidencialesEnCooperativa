@@ -1,4 +1,4 @@
-package cl.cooperativa.presidencialesencooperativa;
+package cl.cooperativa.presidenciales2018encooperativa;
 
 /**
  * Created by innova6 on 14-07-2017.

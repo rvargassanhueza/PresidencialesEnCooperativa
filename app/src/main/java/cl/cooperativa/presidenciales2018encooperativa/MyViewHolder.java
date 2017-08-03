@@ -1,4 +1,4 @@
-package cl.cooperativa.presidencialesencooperativa;
+package cl.cooperativa.presidenciales2018encooperativa;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

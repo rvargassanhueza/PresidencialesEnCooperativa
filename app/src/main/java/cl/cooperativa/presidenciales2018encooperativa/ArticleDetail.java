@@ -1,4 +1,4 @@
-package cl.cooperativa.presidencialesencooperativa;
+package cl.cooperativa.presidenciales2018encooperativa;
 
 import java.io.Serializable;
 

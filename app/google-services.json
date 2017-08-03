@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "567919816467",
-    "firebase_url": "https://app-android-radio.firebaseio.com",
-    "project_id": "app-android-radio",
-    "storage_bucket": "app-android-radio.appspot.com"
+    "project_number": "366695194628",
+    "firebase_url": "https://presidenciales-en-cooper-a4854.firebaseio.com",
+    "project_id": "presidenciales-en-cooper-a4854",
+    "storage_bucket": "presidenciales-en-cooper-a4854.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:567919816467:android:0dc91d628a60a826",
+        "mobilesdk_app_id": "1:366695194628:android:d00de52e21a48c4d",
         "android_client_info": {
-          "package_name": "cl.android.app"
+          "package_name": "cl.cooperativa.presidenciales2018encooperativa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "567919816467-7lcghs2n2fou80u6hlkdcj3thj8ahgn9.apps.googleusercontent.com",
+          "client_id": "366695194628-pigs1moc9og87c8f56dgaibq4tk2a4vu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "cl.android.app",
+            "package_name": "cl.cooperativa.presidenciales2018encooperativa",
             "certificate_hash": "4c28076061bbd43c2c38553d213cb8706de4edb5"
           }
         },
         {
-          "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
+          "client_id": "366695194628-d6niu1n8tm105fu32bnabon4h8sm7sem.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBG4JAA4Za2y6LkNFedr5Qfvjl7kgzPHwk"
+          "current_key": "AIzaSyAyN1qbZk5B_etyLs2ppQzC_zjsNHy9YdY"
         }
       ],
       "services": {
@@ -40,51 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:567919816467:android:29e1776d3bebf9dd",
-        "android_client_info": {
-          "package_name": "cl.cooperativa.presidencialesencooperativa"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "567919816467-trt719jsoinhi98jdl6dph6joab67bbr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "cl.cooperativa.presidencialesencooperativa",
-            "certificate_hash": "4c28076061bbd43c2c38553d213cb8706de4edb5"
-          }
-        },
-        {
-          "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBG4JAA4Za2y6LkNFedr5Qfvjl7kgzPHwk"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "567919816467-92juf7i7avmj1v404bro3l21q9vdgca0.apps.googleusercontent.com",
+              "client_id": "366695194628-d6niu1n8tm105fu32bnabon4h8sm7sem.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

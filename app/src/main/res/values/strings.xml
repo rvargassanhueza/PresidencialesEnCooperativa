@@ -22,6 +22,9 @@
     <string name="tab_reporteros">Elector Reportero</string>
     <string name="tab_portada">Portada Elecciones</string>
     <string name="action_settings">Acción de Menú</string>
+    <string name="facebook_app_id">357001698069379</string>
+    <string name="fb_login_protocol_scheme">fb357001698069379</string>
+
 
     <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
 
@@ -31,4 +34,6 @@
     <string name="titleimagedetail">\"TitleImageDetail"</string>
     <string name="lorem">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum pellentesque lectus ac cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\"</string>
     <string name="transitonname_picture">transitonname_picture</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="signin_button">Sign In</string>
 </resources>
